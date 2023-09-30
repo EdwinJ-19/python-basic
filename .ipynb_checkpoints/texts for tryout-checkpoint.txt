@@ -8,3 +8,5 @@ List in python is used to store the sequence of various types of data. Python li
 python consists of six data-types that are capable to store the sequences, but themost common and reliable type is the list.
 
 A list can be defined as a collection of values or items of different types. The items in the list are separated with the comma (,) and enclosed with the square brackets [].
+
+iterator: the values should be in sequence, so that it can run in sequential program
