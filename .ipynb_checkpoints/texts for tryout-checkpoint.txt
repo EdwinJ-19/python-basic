@@ -10,3 +10,9 @@ python consists of six data-types that are capable to store the sequences, but t
 A list can be defined as a collection of values or items of different types. The items in the list are separated with the comma (,) and enclosed with the square brackets [].
 
 iterator: the values should be in sequence, so that it can run in sequential program
+
+Python List:
+A list in python is used to store the sequence of various types of data.
+Python list are mutable type its mean we can modify its element after it created. However, Python consists of six data-types that are capable to store the sequence.
+
+delete list elements: we can delete one or more items from a list using the Python del statement.
