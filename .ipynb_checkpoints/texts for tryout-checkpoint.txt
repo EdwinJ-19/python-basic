@@ -16,3 +16,17 @@ A list in python is used to store the sequence of various types of data.
 Python list are mutable type its mean we can modify its element after it created. However, Python consists of six data-types that are capable to store the sequence.
 
 delete list elements: we can delete one or more items from a list using the Python del statement.
+
+membership operator: there are two types of operator that is in(checks if the value exist in a sequence) and not in(checks if the value does not exist in a sequence)
+
+identity operator: there are two types of operator that is: is (check if the value is equal by memory allocation reference) and not is(checks if the value is unequal by memory allocation reference)
+
+in python we use memory address to store the values in identity operator as in id(""), memory is fixed but the location will be shifted differently.
+
+set: set is a list of elements that is in undordered value. Elements cannot be changed but sets can be changed.the location of the element in a set is undordered which means they are placed randomly at any position and hence cannot be indexed with [n] syntax. set is unordered and unindexed. to create a set use the curly brackets and place the elements separated by comma.
+
+list comprehension is one of the distinct features of python, a feature that separates python from other programming language. It uses powerful functionality to create a list within a single line of code.
+syntax:
+new_list = ["expression" for "value" in "iterable"]
+
+enumerate: internal list of tuples containing index and values 
