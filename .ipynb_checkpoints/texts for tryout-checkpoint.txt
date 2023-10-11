@@ -30,3 +30,11 @@ syntax:
 new_list = ["expression" for "value" in "iterable"]
 
 enumerate: internal list of tuples containing index and values 
+
+Function: it is a block of statement of a specific task, which allows the methods to execute, it avoids repetition and makes code reusable.
+components of function: method declaration, method statment, method call.
+
+types of function: built-in, user define, anonymous (no map)
+
+arguments and parameter are both same
+types of argument: required,default,keyword,variable length (tuple and dictionary)
