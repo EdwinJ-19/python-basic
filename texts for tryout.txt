@@ -38,3 +38,11 @@ types of function: built-in, user define, anonymous (no map)
 
 arguments and parameter are both same
 types of argument: required,default,keyword,variable length (tuple and dictionary)
+
+Map() function applies a given function to each item of an iterable (list,tuple etc.) and returns an iterator.
+
+reduce(fun,seq) fucntion is used to apply a particular function passed in its argument to all of the list elements mentioned in the sequence passed along. This function is defined in the "functools" module.
+
+functools.reduce(function, iterable[, initializer])
+
+recursive function is used to do a loop till the recursive values given. And it does not follow the seqeunce, it works they way till the recursive ends.
