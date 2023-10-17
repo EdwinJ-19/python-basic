@@ -1,0 +1,292 @@
+OOPs (Object-Oriented Programming)
+
+Python is multi-paradigm programming language. Python can use multiple different approaches to solve a problem.
+
+Procedural Programming ===> programming solution are created using functions where we concentrate more on the functionality of the problem than the data involved in the problem.
+
+Object-Oriented Programming ===> programming solution are focused not just on the function but also on the data involved in the implementation of the function.
+
+Objects are some real world entity.
+
+Object ===> I am object
+
+Object ===> You are also an object
+
+We will now try to find out the common things in the object.
+
+Every object is associated with two things:
+1. Attributes/Properties/Data: created using variables
+2. Behaviours/Methods/Functions: created using functions(using def keyword)
+
+I am object ===> Person Object
+Name  #attributes/properties/data
+Address
+email
+Phone
+DOB
+sleep()  #Behaviours/Methods/Functions
+eat()
+walk()
+
+You are object
+Name
+Address
+email
+Phone
+DOB
+sleep()
+eat()
+walk()
+
+Conceptually we think of the solution from the object perspective but while programmming/implementing that solution we will create a blueprint of these objects which is known as CLASS in oop.
+
+Class: template, blueprint of the object
+
+Object: is created from the class. any number of objects can now be created from the class. 
+
+Objects are also known as instance(example) of the class. The process of creating the object from the class is known as instantiation.
+
+OOP is focused on reusable code. We will define only the class which is replicated for each object. This concept is known as DRY(Don't Repeat Yourself)
+---------------------------------------------------------------
+
+Create the class
+Syntax:
+class classname:   ===> class header
+	methods
+	attributes
+
+---------------------------------------------------------------
+Object Methods
+Syntax:
+def methodname(self,parameterlist):
+	code block
+
+Object method will work for the respective object of the class. The first parameter when declaring the object is self and after self paraemeter it can any number of parameters
+
+class Student:
+	def test(self):
+		code block
+
+rahul = Student()
+rahul.test()   ===> Student.test(rahul)
+
+self parameter gets the address of the object that is referred by the object variable on which the object method is called. Hence both the object variable and self will refer to the same object
+
+---------------------------------------------------------------
+Create the object of the class
+Syntax:
+objectvariable = classname()
+
+classname() ===> create the instance/object of the class in the heap memory 
+objectvariable ===> will refer the object created in the memory. It will create in the stack memory
+
+---------------------------------------------------------------
+Access the object method/attributes
+Syntax:
+objectvariable.objectmethod()
+objectvariable.objectattribute
+
+---------------------------------------------------------------
+Object Attributes
+
+Three ways to create the object attributes:
+1. Directly define the attribute using the objectname:
+	objectname.attribute=value
+
+2. Using the object method
+	define common attributes for all the objects we can create a object method and then can call that method. But the problem is don't call the method for some object then the attribute will not created for that object. 
+
+3. Using the constructor method (__init__)
+	__init__ predefined method of the class which is called automatically when the object of the class is created. Hence this method is also called constructor method. We just need to provide the code block for this method but no need to call the method.
+
+----------------------------------------------------------
+Predefined Methods
+1. __init__: This is constructor method of the class that is called automatically when the object is created. This method is used to perform the initialization steps of the object. 
+
+2. __del__: This is destructor method of the class that is called automatically called when the object is being deleted. This method is before the object is actually deleted, it itself will not delete the object. 
+
+3. __str__: This method is automatically called when we try to print the objectvariable. This method will return a string value. This method is converting the object into string.
+
+---------------------------------------------------------
+Static Attributes
+Is defined for the entire class and not for the individual object and is declared outside any method of the class. If we want to access this class attribute we will use the class reference instead of the object reference. If the value of the static attribute is changed, the change will be reflected for all the objects of the class.
+
+---------------------------------------------------------
+Static Methods
+That are bound to the class and not the object. By default the interpreter considers all the methods declared inside the class as the object method, so we need to specify that some method is a static method by using a decorator @staticmethod above the method header.
+
+Syntax:
+@staticmethod
+def methodname(parameterlist):
+	code block
+
+--------------------------------------------------------
+Inheritance
+Is used for reusing the class. Allows us to define a class that inherits all the methods and attributes from another class. In inheritance we identify the common members(methods and attributes) in multiple classes and then we will be create a common class having these members and then this class with common member can be inherited by the other class which can also include their own member
+
+In inheritance, there are atleast two classes:
+1. Parent/Super/Base Class: class which has the common members that will be inherited.
+2. Child/Sub/Derived Class: class which actually inherits the members of the parent class
+
+--------------------------------------------------------
+Types of Inheritance:
+1. Single Inheritance: One parent class and only one child class
+P ---> C
+
+2. Multilevel Inheritance: One parent class inherited by the Child class, which will be inherited by the grandchild class and so on.
+
+P ---> C ---> GC ---> GGC ----> ......
+
+3. Hierarchical Inheritance: One common parent class, but multiple child classes
+
+4. Multiple Inheritance: One child class inheriting from multiple parent classes
+
+5. Hybrid Inheritance: Mix of all the preceding inheritance
+
+Syntax to implement inheritance
+class ChildClass(ParentClasses):
+	...
+
+---------------------------------------------------------------
+Method Overriding
+Is process in which the methods inherited from the parent class will get a new implementation in the child class. Rewrite the method of the parent class in the child class.
+
+Whiling overriding the method, we need to make sure that the method name is same as defined in the parent and even the number of parameter should be same. Basically, the method signature or header should be same in both parent and child class.
+
+--------------------------------------------------------------
+If we want to call the parent class method from the child class, we can use two technique:
+1. using super(): this method will return the reference to the parent class
+2. using classname: call using the parent class reference
+
+--------------------------------------------------------------
+Ambiguity Issue in Multiple Inheritance:
+When a class is getting the same name method from more than one parent class and we call the inherited method using the child class instance, the child class will give priority to only one parent class and call its inherited method
+
+To resolve the issue where we want to call method inherited from all the parent classes, we can use method overriding
+
+This decision on which parent class method should be called is based on MRO(Method Resolution Order)
+
+--------------------------------------------------------------
+object class
+
+Is the predefined class of the python which is by default inherited by all the classes created in the python. This class is the main parent class of all the classes in the python.
+
+class A(object):  //implicitly
+	pass
+class B(A):  //explicitly
+	pass
+
+-------------------------------------------------------------
+In python everything that we create is a object, even the datatypes are defined as the class and when we created the variable of these datatypes we are actually creating the objects of the datatype class
+
+eg, a=10  ==> 10 is stored in the object of the class int in the heap memory whereas a is the reference variable stored in the stack memory.
+
+nums=[1,6,3] 
+
+-------------------------------------------------------------
+Operator in the python will work as per the datatype of the operands
+
+eg, + operator will work will int, float, str, bool, list, tuple.......
+
+- operator will work int, float, complex ... but will not work on str, list
+
+When we use the operator on the operand the respective method is called from the class of the operand datatype
+
+eg. a=10
+	b=20
+	a+b
+
+a and b both are objects of int class. So when we use + operator on the int object, __add__ method of the class int is called.
+
+	a-b
+a and b both are objects of int class. So when we use + operator on the int object, __sub__ method of the class int is called.
+
+a+b  ===> int.__add__(a,b)
+
+s1='hello'
+s2='world'
+s1+s2 ===> str.__add__(s1,s2)
+
+-------------------------------------------------------------
+Operator Overloading
+Is the process of giving the extended meaning to the operator to perform beyond its predefined operations. We can overload all the existing operators but we can't create any new operators.
+
+To implement operator overloading, Python provides some special methods that will be automatically called when the operator is used. So we need to define this special method is our class in order to use the operator on the object of the class
+
+------------------------------------------------------------
+Access Modifiers
+
+Are used to control the accessibility of the attributes and methods, inside and outside the class
+
+Types of access modifiers:
+1. public: by default all the attributes and methods defined in the class are public. Means accessible to everyone (inside or outside the class)
+
+2. protected (public): Ideally, the attributes and methods should be accessible only within its own class and all the child classes but should not be accessible outside the class. To make any member of the class as protected, we prefix it with '_' single underscore. But in python protected member behave as public and are accessible outside the class.
+
+3. private (strongly private): the attributes and methods are accessible only within its own class and not outside the class not even in the child class. To make any member of the class as private, prefix it with '__' double underscore.
+
+-----------------------------------------------------------
+Errors
+Are the problems in a program due to which the program will stop the execution.
+
+Types of Errors:
+1. Syntax Errors: Something wrong with the grammer or spelling mistake in the program. If there syntax error in the program, interpreter will not execute the code. Interpreter will give a clear message stating what is wrong with the program and we need to fix it.
+
+2. Runtime Errors/Exceptions: Will occur at runtime in syntactically correct code. Interpreter will start the execution of the command, but due to some reason is not able to complete the action, the interpreter will terminate the code and raise the error message.
+
+3. Logical Error: These errors are the most difficult errors to fix as the interpreter is not able to identify what is wrong with the program because there is no syntax error and the program is also executing successfully at the runtime. Here the main issue we are not getting the output that we were expecting.
+
+------------------------------------------------------------
+Exception Handling
+
+1. Default Exception Handling by Interpreter
+An exception is the event which occurs during the execution of the program that will stop the execution of the entire program. An exception is object that represents the error. By default the exceptions are handled by the interpreter as follow:
+
+I. Based on the condition because of which the program execution cannot be completed the interpreter will create/raise the object of the predefined Exception class as per condition.
+II. Since we are not handling this exception, the interpreter itself will handle it by stopping the execution of the program abruptly and display the error message.
+
+-----------------------------------------------------------
+2. Exception Handling using try/except/else/finally blocks
+3. Raising exception for certain conditions
+4. Creating user-defined exceptions
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

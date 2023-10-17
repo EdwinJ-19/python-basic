@@ -1,0 +1,20 @@
+OOPS in Python:
+
+Object Oriented Programming Language: refers to a type of computer programming in which programmers of data structure.
+
+features: object, class, encapsulation, inheritance, polymorphism, abstraction.
+
+in python we called attributes(like students have roll number,name, dob, age) as variables.
+
+Object: real world entity; object= identity,state and behavior
+
+class: it is a blueprint of an object that takes behavior and the state or it takes object to bind together that takes as attributes and their method.
+attribute: name,roll number, dob 
+method: def displaystudent(): /block of statement/ displaystudent()
+
+inheritance: inherit the property from the existence.
+single inheritance: super class (base class) <-- sub class (derived class), hierarchial inheritance: super class <-- sub class 1,2,3 , multilevel inheritance: super class <- sub class 1 <- sub class 2, multiple inheritance: super class 1, super class 2 <-- sub class.
+
+polymorphism: it means the ability to take various forms, method overloading: same method/parameter and different classes. method overriding: different parameter and same classes.
+
+global: outside the variable and local: within the variable
