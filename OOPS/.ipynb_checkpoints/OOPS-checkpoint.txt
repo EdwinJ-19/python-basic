@@ -18,3 +18,17 @@ single inheritance: super class (base class) <-- sub class (derived class), hier
 polymorphism: it means the ability to take various forms, method overloading: same method/parameter and different classes. method overriding: different parameter and same classes.
 
 global: outside the variable and local: within the variable
+
+constructor:
+there are three ways to create the object attributes.
+1) directly define the attribute using objectname: objname.attribute =value
+2) using object method define common attribute for all the object 
+
+the file may be opened in one of the following modes:
+modes->description
+r-> open a file for read only
+w-> open a file for write only
+a-> open a file for write only
+x->creates a new file for write only
+r+ -> open a file for read/write. file pointer starts at the beginnig of the file
+w+ -> open a file for read/write. erase the content of the file to start with new.
