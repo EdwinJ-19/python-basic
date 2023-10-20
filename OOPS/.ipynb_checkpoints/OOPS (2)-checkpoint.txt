@@ -6,6 +6,8 @@ Procedural Programming ===> programming solution are created using functions whe
 
 Object-Oriented Programming ===> programming solution are focused not just on the function but also on the data involved in the implementation of the function.
 
+(data members are the data variables and member functions (behavior and property) are used to manipulate these variables)
+
 Objects are some real world entity.
 
 Object ===> I am object
@@ -29,12 +31,12 @@ eat()
 walk()
 
 You are object
-Name
+Name    #attributes/properties/data
 Address
 email
 Phone
 DOB
-sleep()
+sleep()     #Behaviours/Methods/Functions
 eat()
 walk()
 
@@ -77,8 +79,8 @@ Create the object of the class
 Syntax:
 objectvariable = classname()
 
-classname() ===> create the instance/object of the class in the heap memory 
-objectvariable ===> will refer the object created in the memory. It will create in the stack memory
+classname() ===> create the instance/object of the class in the heap memory(just part of the application) 
+objectvariable ===> will refer the object created in the memory. It will create in the stack memory(its used only by one thread of execution)
 
 ---------------------------------------------------------------
 Access the object method/attributes
