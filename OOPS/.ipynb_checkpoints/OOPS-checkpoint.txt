@@ -32,3 +32,9 @@ a-> open a file for write only
 x->creates a new file for write only
 r+ -> open a file for read/write. file pointer starts at the beginnig of the file
 w+ -> open a file for read/write. erase the content of the file to start with new.
+
+inheritance:
+
+it is the capability of one class to derive or inherit the properties from another class.
+Benefit is: It represents real-world relationship
+
