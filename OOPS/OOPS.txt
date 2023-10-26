@@ -38,3 +38,17 @@ inheritance:
 it is the capability of one class to derive or inherit the properties from another class.
 Benefit is: It represents real-world relationship
 
+Types of Inheritance:
+1. Single Inheritance: One parent class and only one child class
+P ---> C
+
+2. Multilevel Inheritance: One parent class inherited by the Child class, which will be inherited by the grandchild class and so on.
+
+P ---> C ---> GC ---> GGC ----> ......
+
+3. Hierarchical Inheritance: One common parent class, but multiple child classes
+
+4. Multiple Inheritance: One child class inheriting from multiple parent classes
+
+5. Hybrid Inheritance: Mix of all the preceding inheritance
+
